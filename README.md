@@ -1,4 +1,6 @@
-**Q: How to use prettyPrint to print json
+## FAQ
+
+### Q: How to use prettyPrint to print json
 
 ```Groovy
 import static groovy.json.JsonOutput.*
@@ -7,7 +9,7 @@ json = '{"uploader":{"name":"Surname, Name", "email":"Surname.Name@mail.com"}}'
 println prettyPrint(jsonik)
 ```
 
-**Q: How to remove Jenkins builds with 'FAILURE' status
+### Q: How to remove Jenkins builds with 'FAILURE' status
 
 ```Groovy
 builds = Jenkins.instance.getItemByFullName("TestDir/TestJob")._getRuns()
@@ -20,7 +22,7 @@ builds.each { build ->
 }
 ```
 
-**Q: How to check whether particular Stage was executed in Jenkins builds
+### Q: How to check whether particular Stage was executed in Jenkins builds
 
 ```Groovy
 builds = Jenkins.instance.getItemByFullName("TestDir/TestJob")._getRuns()
@@ -40,7 +42,7 @@ builds.each { build ->
 }
 ```
 
-**Q: How to read logs from triggered Jenkins build and parse line by line
+### Q: How to read logs from triggered Jenkins build and parse line by line
 
 ```Groovy
 def triggerredJob = build job: 'JobNameToBeTriggered',
@@ -60,7 +62,7 @@ log.each { line ->
 print logEntries
 ```
 
-**Q: How to use when statement
+### Q: How to use when statement
 
 ```Groovy
 stage('when with env') {
@@ -91,7 +93,7 @@ stage('When with Date') {
 }
 ```
 
-**Q: How to use switch statement
+### Q: How to use switch statement
 
 ```Groovy
 int code = 105
